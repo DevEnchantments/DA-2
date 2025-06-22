@@ -1,0 +1,84 @@
+{
+  "expo": {
+    "name": "Test-DA",
+    "slug": "test-da",
+    "owner": "faresms",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.faresms.testda",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSCameraUsageDescription": "This app uses the camera to scan barcodes on food products for nutritional information.",
+        "NSHealthShareUsageDescription": "This app reads glucose data from HealthKit to track your blood sugar levels",
+        "NSHealthUpdateUsageDescription": "This app writes glucose data to HealthKit to keep your health records updated"
+      },
+        "entitlements": {
+        "com.apple.developer.healthkit": true
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.faresms.testda",
+      "permissions": [
+        "CAMERA"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "This app uses the camera to scan barcodes on food products for nutritional information."
+        }
+      ],
+      "react-native-vision-camera",
+      [
+        "@kingstinct/react-native-healthkit",
+        {
+          "healthSharePermission": "This app reads glucose data from HealthKit to track your blood sugar levels",
+          "healthUpdatePermission": "This app writes glucose data to HealthKit to keep your health records updated"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "3454427f-8f2d-4fb5-afda-7ffb50914001"
+      },
+      "OPENAI_API_KEY": "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"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/3454427f-8f2d-4fb5-afda-7ffb50914001"
+    }
+  }
+}
